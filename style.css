@@ -1,0 +1,66 @@
+body{
+    background: pink;
+    font-family: 'Arial', sans-serif;
+}
+h1{
+    color:fuchsia;
+    text-align: center;
+    margin-top: 50px;
+}
+p{
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;               
+}
+audio{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 15px;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.flower {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 50px auto;
+}
+.petal {
+    position: absolute;
+    width: 90px;
+    height: 120px;
+    background: radial-gradient(circle at 35% 30%, #ff80bf, #e60073);
+    border-radius: 60% 60% 40% 40%;
+    transform-origin: 50% 100%;
+    animation: sway 4s ease-in-out alternate;
+    opacity: 0.95;
+}
+.petal.p1 { top: 20px; left: 35px; transform: rotate(0deg); animation-delay: 0s; }
+.petal.p2 { top: 20px; left: 35px; transform: rotate(72deg); animation-delay: .15s; }
+.petal.p3 { top: 20px; left: 35px; transform: rotate(144deg); animation-delay: .3s; }
+.petal.p4 { top: 20px; left: 35px; transform: rotate(216deg); animation-delay: .45s; }
+
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    background: radial-gradient(circle, #ffeb3b 0%, #f57f17 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 193, 7, .6);
+    animation: pulse 3s ease-in-out;
+}
+
+@keyframes sway {
+    0% { transform: rotate(var(--rot, 0deg)) translateY(0px) scale(1); }
+    100% { transform: rotate(var(--rot, 0deg)) translateY(-10px) scale(1.03); }
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.14); }
+}  
